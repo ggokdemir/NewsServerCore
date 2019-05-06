@@ -1,0 +1,62 @@
+﻿@model IEnumerable<NewsServerMVC.Models.NewsModel>
+
+@{
+    ViewData["Title"] = "Added";
+}
+
+<h2>Added</h2>
+
+<p>
+    @Html.ActionLink("Create", "Index")
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.newsId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.newsTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.newsImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.newsContent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.newsTopic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.newsDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.newsId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.newsTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.newsImage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.newsContent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.newsTopic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.newsDate)
+            </td>
+            <td>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
